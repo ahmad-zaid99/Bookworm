@@ -13,7 +13,7 @@ const Swipe = () => {
     return (
         <div>
             <SwipeCard props={prop} />
-            <SwipeButtons />
+            {/* <SwipeButtons /> */}
         </div>
     );
 }

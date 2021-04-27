@@ -3,6 +3,19 @@ import React, { useState } from "react";
 import "./SwipeCard.css";
 import TinderCard from 'react-tinder-card';
 
+import "./SwipeButtons.css";
+import ReplayIcon from "@material-ui/icons/Replay";
+import CloseIcon from '@material-ui/icons/Close';
+import StarRateIcon from "@material-ui/icons/StarRate";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import FlashOnIcon from "@material-ui/icons/FlashOn";
+import { IconButton } from "@material-ui/core";
+
+
+
+let iconStyles = {
+    fontSize: '55px'
+  };
 
 
 function SwipeCard(props){
@@ -25,6 +38,23 @@ function SwipeCard(props){
                             <p>{book.distance} kms away</p>
 
                         </div>
+
+                        <div className="swipeButtons">
+                        
+                            <IconButton className="swipeButtons__left">
+                                <CloseIcon style={iconStyles} />
+                            </IconButton>
+                            {/* <IconButton className="swipeButtons__star">
+                                <StarRateIcon fontSize="large" />
+                            </IconButton> */}
+                            <IconButton className="swipeButtons__right">
+                                <FavoriteIcon style={iconStyles} />
+                            </IconButton>
+                            {/* <IconButton className="swipeButtons__lightning">
+                                <FlashOnIcon fontSize="large" />
+                            </IconButton> */}
+                        </div>
+
 
                     </TinderCard>
                 {/* ) )} */}
